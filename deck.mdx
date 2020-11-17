@@ -20,14 +20,14 @@ Originally built by [Rodrigo Pombo](https://github.com/pomber/react-conf-2018-ho
 
 ---
 
-Re-published with minor modification by Ade Azurat for Functional Programming Class 2019 in Fasilkom UI
-[funpro2019-reacthook.netlify.com](https://funpro2019-reacthook.netlify.com/)
+Re-published and translated to Bahasa Indonesia with minor modification by Ade Azurat for Functional Programming Class in Fasilkom UI
+[funpro-reacthook.netlify.com](https://funpro-reacthook.netlify.com/)
 
 ---
 
 <CodeSurferColumns sizes={[1, 2]}>
   
-<Step subtitle="Here is a simple React component">
+<Step subtitle="Ini sebuah Komponen React sederhana">
   
 <GreetingLoader />
 
@@ -36,7 +36,7 @@ Re-published with minor modification by Ade Azurat for Functional Programming Cl
 
 </Step>
 
-<Step subtitle="we want to make the 'name' editable">
+<Step subtitle="Kita ingin membuat 'name' dapat diedit">
     
 <GreetingLoader />
 
@@ -45,7 +45,7 @@ Re-published with minor modification by Ade Azurat for Functional Programming Cl
 
 </Step>
   
-<Step subtitle="so we turn the component into a class">
+<Step subtitle="maka, kita menjadikannya sebagai class">
     
 <GreetingLoader version="class.1.1" />
 
@@ -54,7 +54,7 @@ Re-published with minor modification by Ade Azurat for Functional Programming Cl
 
 </Step>
 
-<Step subtitle="add some state">
+<Step subtitle="menambahkan state">
 
 <GreetingLoader version="class.1.2" />
 
@@ -63,7 +63,7 @@ Re-published with minor modification by Ade Azurat for Functional Programming Cl
 
 </Step>
 
-<Step subtitle="and add a change handler that calls setState">
+<Step subtitle="dan menambahkan sebuah handler perubahan yang memanggil setState">
 
 <GreetingLoader version="class.1.3" />
 
@@ -72,7 +72,7 @@ Re-published with minor modification by Ade Azurat for Functional Programming Cl
 
 </Step>
 
-<Step subtitle="we can now edit the name and it should work">
+<Step subtitle="sekarang sudah berhasil dan kita bisa mengedit 'name'">
 
 <GreetingLoader version="class.1.3" />
 
@@ -85,7 +85,7 @@ Re-published with minor modification by Ade Azurat for Functional Programming Cl
 
 ---
 
-But let's take a step back
+Namun mari kita observasi dan lihat kembali!
 
 ---
 
@@ -94,7 +94,7 @@ But let's take a step back
   themes={[hooksTheme, hooksTheme]}
 >
 
-<Step subtitle="what if we didn't have to write a class when we want to use state?">
+<Step subtitle="bagaimana bila kita tidak harus membuat class untuk memanfaatkan state?">
 
 <GreetingLoader theme={hooksTheme} />
 
@@ -103,7 +103,7 @@ But let's take a step back
 
 </Step>
 
-<Step subtitle="we want to render an input with the name as the value">
+<Step subtitle="kita ini menampilkan (render) form input dengan 'name' sebagai value ">
 
 <GreetingLoader theme={hooksTheme} />
 
@@ -112,7 +112,7 @@ But let's take a step back
 
 </Step>
 
-<Step subtitle="we don't know where to get name from, we'll fill it in later">
+<Step subtitle="kita belum tahu dari mana value 'name' didapati, kita akan lengkapi nanti">
 
 <GreetingLoader theme={hooksTheme} />
 
@@ -121,7 +121,7 @@ But let's take a step back
 
 </Step>
 
-<Step subtitle="we also need a way to update the name when the input changes">
+<Step subtitle="kita juga harus dapat mengupdate 'name' ketika input berubah">
 
 <GreetingLoader theme={hooksTheme} />
 
@@ -130,7 +130,7 @@ But let's take a step back
 
 </Step>
 
-<Step subtitle="name and setName are closely related, let's put them together">
+<Step subtitle="'name' dan 'setName' cukup berhubungan, mari kita kumpulkan">
 
 <GreetingLoader theme={hooksTheme} />
 
@@ -139,7 +139,7 @@ But let's take a step back
 
 </Step>
 
-<Step subtitle="where do we get name and setName from?">
+<Step subtitle="dari mana kita mendapati 'name' dan 'setName'?">
 
 <GreetingLoader theme={hooksTheme} />
 
@@ -148,7 +148,7 @@ But let's take a step back
 
 </Step>
 
-<Step subtitle="what if we could just **use** state from React?">
+<Step subtitle="bagaimana jika kita dapat memanfaatkan  **use** state dari React?">
 
 <GreetingLoader version="hooks.1.4" theme={hooksTheme} />
 
@@ -165,40 +165,40 @@ But let's take a step back
 
 <Step>
 
-```jsx file=./src/greeting.class.1.3.js title="Before Hooks" subtitle="A class component with state"
+```jsx file=./src/greeting.class.1.3.js title="Sebelum" subtitle="Sebuah class component dengan state"
 ```
 
-```jsx file=./src/greeting.hooks.1.4.js title="After Hooks" subtitle="A function component with state"
-```
-
-</Step>
-
-<Step>
-
-```jsx 7:9 file=./src/greeting.class.1.3.js title="Before Hooks" subtitle="state has to be an object"
-```
-
-```jsx 5 file=./src/greeting.hooks.1.4.js title="After Hooks" subtitle="state could be anything"
+```jsx file=./src/greeting.hooks.1.4.js title="Sesudah" subtitle="Sebuah function component dengan state"
 ```
 
 </Step>
 
 <Step>
 
-```jsx 7:12,16,24 file=./src/greeting.class.1.3.js title="Before Hooks" subtitle="we read and update the state using this.state and this.setState"
+```jsx 7:9 file=./src/greeting.class.1.3.js title="Sebelum" subtitle="state harus berupa object"
 ```
 
-```jsx 5,8,14[16:27] file=./src/greeting.hooks.1.4.js title="After Hooks" subtitle="the state and the setter are just variables in the function"
+```jsx 5 file=./src/greeting.hooks.1.4.js title="Sesudah" subtitle="state bisa apa saja"
 ```
 
 </Step>
 
-<Step subtitle="What is useState exactly? useState is a hook, a function provided by React that lets you hook into React features from your function components">
+<Step>
 
-```jsx 1[100],31[100] file=./src/greeting.class.1.3.js title="Before Hooks"
+```jsx 7:12,16,24 file=./src/greeting.class.1.3.js title="Sebelum" subtitle="baca dan update state dengan this.state dan this.setState"
 ```
 
-```jsx 1[1:7,15:40],5 file=./src/greeting.hooks.1.4.js title="After Hooks"
+```jsx 5,8,14[16:27] file=./src/greeting.hooks.1.4.js title="Sesudah" subtitle="the state dan the setter hanyalah variables dalam function"
+```
+
+</Step>
+
+<Step subtitle="Apakah useState sebenarnya? useState adalah hook, sebuah function dari React yang mengizinkan kita terhubung dengan React features dari function components">
+
+```jsx 1[100],31[100] file=./src/greeting.class.1.3.js title="Sebelum"
+```
+
+```jsx 1[1:7,15:40],5 file=./src/greeting.hooks.1.4.js title="Sesudah"
 ```
 
 </Step>
@@ -209,7 +209,7 @@ But let's take a step back
 
 <CodeSurferColumns sizes={[1, 2]}>
 
-<Step subtitle="Now we want to add a second field for the surname">
+<Step subtitle="Sekarang kita ingin menambahkan field kedua untuk surname">
 
 <GreetingLoader version="class.1.3" />
 
@@ -218,7 +218,7 @@ But let's take a step back
 
 </Step>
 
-<Step subtitle="so we add another key to the state and copy all the boilerplate">
+<Step subtitle="maka kita tambahkan ket ke state dan mereplikasi kerangka codenya">
 
 <GreetingLoader version="class.2.1" />
 
@@ -236,7 +236,7 @@ But let's take a step back
   themes={[classTheme, hooksTheme]}
 >
 
-<Step subtitle="Let's do the same with hooks">
+<Step subtitle="Mari lakukan lagi dengan hooks">
 
 <GreetingLoader version="hooks.1.4" theme={hooksTheme} />
 
@@ -245,7 +245,7 @@ But let's take a step back
 
 </Step>
 
-<Step subtitle="we just declare a second state for surname and render it">
+<Step subtitle="kita sudah mendeklarasikan state kedua untuk surname dan menampilkannya">
 
 <GreetingLoader version="hooks.2.1" theme={hooksTheme} />
 
@@ -260,7 +260,7 @@ But let's take a step back
 
 <CodeSurferColumns sizes={[1, 2]}>
 
-<Step subtitle="Let's read stuff from context">
+<Step subtitle="Mari membaca data dari 'context'">
 
 <GreetingLoader version="class.2.1" />
 
@@ -269,7 +269,7 @@ But let's take a step back
 
 </Step>
 
-<Step subtitle="first we import the context from another file">
+<Step subtitle="pertama kita import context dari sebuah berkas">
 
 <GreetingLoader version="class.3.1" />
 
@@ -278,7 +278,7 @@ But let's take a step back
 
 </Step>
 
-<Step subtitle="we get the theme using the context render prop API">
+<Step subtitle="kita dapatkan theme dari context render prop API">
 
 <GreetingLoader version="class.3.2" />
 
@@ -287,7 +287,7 @@ But let's take a step back
 
 </Step>
 
-<Step subtitle="and do the same with the locale">
+<Step subtitle="dan kita lakukan yang sama untuk locale">
 
 <GreetingLoader version="class.3.3" />
 
@@ -305,7 +305,7 @@ But let's take a step back
   themes={[classTheme, hooksTheme]}
 >
 
-<Step subtitle="How could we do the same with hooks?">
+<Step subtitle="Apakah kita bisa lakukan yang sama atau lebih dengan hooks?">
 
 <GreetingLoader version="hooks.2.1" theme={hooksTheme} />
 
@@ -314,7 +314,7 @@ But let's take a step back
 
 </Step>
 
-<Step subtitle="we import useContext from React">
+<Step subtitle="kita import useContext dari React">
 
 <GreetingLoader version="hooks.3.1" theme={hooksTheme} />
 
@@ -323,7 +323,7 @@ But let's take a step back
 
 </Step>
 
-<Step subtitle="we can get the theme (and subscribe to updates) by just using the hook">
+<Step subtitle="kita bisa mengambil theme dan memonitor perubahannya menggunakan hook">
 
 <GreetingLoader version="hooks.3.2" theme={hooksTheme} />
 
@@ -347,12 +347,12 @@ But let's take a step back
 
 <CodeSurferColumns themes={[classTheme, hooksTheme]}>
 
-<Step subtitle="with the context hook we get rid of the render prop wrapper">
+<Step subtitle="Dengan context, kita terhindar dari membungkus (wrapper) render prop. Kode lebih bersih.">
 
-```jsx 30,31,45,46,48,49,51,52 file=./src/greeting.class.3.3.js title="Before Hooks"
+```jsx 30,31,45,46,48,49,51,52 file=./src/greeting.class.3.3.js title="Sebelum"
 ```
 
-```jsx 8,9 file=./src/greeting.hooks.3.3.js title="After Hooks"
+```jsx 8,9 file=./src/greeting.hooks.3.3.js title="Sesudah"
 ```
 
 </Step>
@@ -363,7 +363,7 @@ But let's take a step back
 
 <CodeSurferColumns sizes={[1, 2]}>
 
-<Step subtitle="Let's now update the document title using lifecycle methods">
+<Step subtitle="Mari ubah document title menggunakan lifecycle methods">
 
 <GreetingLoader version="class.3.3" />
 
@@ -372,7 +372,7 @@ But let's take a step back
 
 </Step>
 
-<Step subtitle="we do it by implementing componentDidMount and componentDidUpdate">
+<Step subtitle="kita perlu mengimplementasi componentDidMount dan componentDidUpdate">
 
 <GreetingLoader version="class.4.1" />
 
@@ -390,7 +390,7 @@ But let's take a step back
   themes={[classTheme, hooksTheme]}
 >
 
-<Step subtitle="How do we do this with hooks?">
+<Step subtitle="Bagaimana melakukannya dengan hooks?">
 
 <GreetingLoader version="hooks.3.3" theme={hooksTheme} />
 
@@ -399,7 +399,7 @@ But let's take a step back
 
 </Step>
 
-<Step subtitle="we have the useEffect hook">
+<Step subtitle="kita manfaatkan useEffect hook">
 
 <GreetingLoader version="hooks.4.1" theme={hooksTheme} />
 
@@ -408,7 +408,7 @@ But let's take a step back
 
 </Step>
 
-<Step subtitle="we pass a function that will run after every update and after the initial render">
+<Step subtitle="kita berikan sebuah function yang dijalakan setiap update dan awal render">
 
 <GreetingLoader version="hooks.4.2" theme={hooksTheme} />
 
@@ -425,20 +425,20 @@ But let's take a step back
 
 <Step>
 
-```jsx 20:28 file=./src/greeting.class.4.1.js title="Before Hooks" subtitle="We have different lifecycle methods for mount and update"
+```jsx 20:28 file=./src/greeting.class.4.1.js title="Sebelum" subtitle="Perlu duplikasi lifecycle methods untuk mount dan update"
 ```
 
-```jsx 15:17 file=./src/greeting.hooks.4.2.js title="After Hooks"
+```jsx 15:17 file=./src/greeting.hooks.4.2.js title="Sesudah"
 ```
 
 </Step>
 
 <Step>
 
-```jsx 20:28 file=./src/greeting.class.4.1.js title="Before Hooks" subtitle="we use this.state to access state"
+```jsx 20:28 file=./src/greeting.class.4.1.js title="Sebelum" subtitle="menggunakan this.state untuk mengakses state"
 ```
 
-```jsx 15:17 file=./src/greeting.hooks.4.2.js title="After Hooks" subtitle="the effect is inside the function component so we can use the variables from the function scope"
+```jsx 15:17 file=./src/greeting.hooks.4.2.js title="Sesudah" subtitle="effect berada dalam function component, jadi kita bisa menggunakan variables dalam function component"
 ```
 
 </Step>
@@ -449,7 +449,7 @@ But let's take a step back
 
 <CodeSurferColumns sizes={[1, 2]}>
 
-<Step subtitle="Now we want to subscribe to the windows resize event">
+<Step subtitle="Sekarang kita ingin memonitor ukuran window saat resize">
 
 <GreetingLoader version="class.4.1" />
 
@@ -458,7 +458,7 @@ But let's take a step back
 
 </Step>
 
-<Step subtitle="we add the window width to the state">
+<Step subtitle="kita tambahkan ukuran lebar window pada state">
 
 <GreetingLoader version="class.5.1" />
 
@@ -467,7 +467,7 @@ But let's take a step back
 
 </Step>
 
-<Step subtitle="add a row to render it">
+<Step subtitle="tambah row label untuk menampilkannya">
 
 <GreetingLoader version="class.5.2" />
 
@@ -476,7 +476,7 @@ But let's take a step back
 
 </Step>
 
-<Step subtitle="add a listener when the component mounts">
+<Step subtitle="tambahkan listener saat componentDidMount">
 
 <GreetingLoader version="class.5.3" />
 
@@ -485,7 +485,7 @@ But let's take a step back
 
 </Step>
 
-<Step subtitle="and remove the listener before the component unmounts">
+<Step subtitle="dan menghapus listener sebelum componentWillUnmount">
 
 <GreetingLoader version="class.5.4" />
 
@@ -503,7 +503,7 @@ But let's take a step back
   themes={[classTheme, hooksTheme]}
 >
 
-<Step subtitle="Let's do the same with hooks">
+<Step subtitle="Mari perhatikan cara melakukannya dengan hooks">
 
 <GreetingLoader version="hooks.4.2" theme={hooksTheme} />
 
@@ -512,7 +512,7 @@ But let's take a step back
 
 </Step>
 
-<Step subtitle="first we use a new state for the width">
+<Step subtitle="pertama kita gunakan sebuah state baru untuk width">
 
 <GreetingLoader version="hooks.5.1" theme={hooksTheme} />
 
@@ -521,7 +521,7 @@ But let's take a step back
 
 </Step>
 
-<Step subtitle="then we use a second effect for handling the resize">
+<Step subtitle="kemudian gunakan effect kedua untuk handle resize">
 
 <GreetingLoader version="hooks.5.2" theme={hooksTheme} />
 
@@ -530,7 +530,7 @@ But let's take a step back
 
 </Step>
 
-<Step subtitle="we can specify a clean up function, in the same effect, by returning it">
+<Step subtitle="kita siapkan fungsi untuk memhapusnya ditempat yang sama dengan cara mereturn fungsi tersebut">
 
 <GreetingLoader version="hooks.5.3" theme={hooksTheme} />
 
@@ -547,10 +547,10 @@ But let's take a step back
 
 <Step>
 
-```jsx 22:35 file=./src/greeting.class.5.4.js title="Before Hooks" subtitle="the logic for the different effects is mixed and splitted apart in different methods"
+```jsx 22:35 file=./src/greeting.class.5.4.js title="Sebelum" subtitle="logika dari effect yang berbeda jadi bercampur dan terpisahkan pada method yang berbeda"
 ```
 
-```jsx 15:17,20:26 file=./src/greeting.hooks.5.3.js title="After Hooks" subtitle="the code is separated based on what is doing instead of when it runs"
+```jsx 15:17,20:26 file=./src/greeting.hooks.5.3.js title="Sesudah" subtitle="Kode dipisahkan sesuai dengan kebutuhan bisnisnya, bukan karena waktu dieksekusi. Separation of Concern!"
 ```
 
 </Step>
@@ -568,7 +568,7 @@ But let's take a step back
   themes={[classTheme, hooksTheme]}
 >
 
-<Step subtitle="this function is getting pretty large">
+<Step subtitle="function ini menjadi makin panjang">
 
 <GreetingLoader version="hooks.5.3" theme={hooksTheme} />
 
@@ -577,7 +577,7 @@ But let's take a step back
 
 </Step>
 
-<Step subtitle="hook calls are just function calls">
+<Step subtitle="hook calls hanyalah pemanggilan function">
 
 <GreetingLoader version="hooks.5.3" theme={hooksTheme} />
 
@@ -586,7 +586,7 @@ But let's take a step back
 
 </Step>
 
-<Step subtitle="so we can extract them">
+<Step subtitle="maka kita bisa ekstraksikan keluar">
 
 <GreetingLoader version="hooks.6.1" theme={hooksTheme} />
 
@@ -604,7 +604,7 @@ But let's take a step back
 
 </Step>
 
-<Step subtitle="we can also reduce duplication">
+<Step subtitle="kita bisa juga kurang duplikasi dengan modularitas fungsi generik">
 
 <GreetingLoader version="hooks.6.2" theme={hooksTheme} />
 
@@ -641,7 +641,7 @@ But let's take a step back
 </CodeSurferColumns>
 
 ---
-References for Functional Programming Class 2019 Fasilkom UI:
+References for Functional Programming Class Fasilkom UI:
 
 [Dan Abramov's talk about React Hook at React Conf 2018](https://youtu.be/dpw9EHDh2bM)
 
